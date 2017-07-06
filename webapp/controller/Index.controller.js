@@ -7,7 +7,7 @@ sap.ui.define([
 		
 		onInit: function () {
 			sap.ui.Device.media.attachHandler( function (oParam) {
-				console.log(oParam.name === 'Phone')
+				console.log(oParam.name === 'Phone');
 			}.bind(this), null, sap.ui.Device.media.RANGESETS.SAP_STANDARD);
 		}
 
