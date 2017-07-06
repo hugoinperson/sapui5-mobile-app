@@ -4,8 +4,11 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("ui5.mobile.app.ui5-mobile-app.controller.Index", {
-		onInit () {
-			console.log('hahahahaha')
+		
+		onInit: function () {
+			sap.ui.Device.media.attachHandler( function (oParam) {
+				console.log(oParam.name === 'Phone')
+			}.bind(this), null, sap.ui.Device.media.RANGESETS.SAP_STANDARD);
 		}
 
 	});
