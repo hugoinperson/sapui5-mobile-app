@@ -1,10 +1,9 @@
-<mvc:View controllerName="ui5.mobile.app.controller.Index" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<App>
-		<pages>
-			<Page title="Login">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View
+	controllerName="ui5.mobile.app.controller.Login"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Text text="333333" />
+	<Button text="Login" press="onLogin" />
 </mvc:View>

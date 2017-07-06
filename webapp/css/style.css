@@ -1,1 +1,14 @@
 /* Enter your custom styles here */
+
+/* hide the shell bar */
+.sapMShellBrandingBar {
+	display: none;
+}
+
+.ui5Mobile-app {
+	height: 100%;
+}
+
+.ui5Mobile-app > .sapMFlexItem {
+	height: 100%;
+}

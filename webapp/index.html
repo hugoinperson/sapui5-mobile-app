@@ -8,8 +8,9 @@
 		<title>ui5-mobile-app</title>
 
 		<script id="sap-ui-bootstrap"
-			src="../../resources/sap-ui-core.js"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
 			data-sap-ui-libs="sap.m"
+			data-sap-ui-preload="async"
 			data-sap-ui-theme="sap_belize"
 			data-sap-ui-compatVersion="edge"
 			data-sap-ui-resourceroots='{"ui5.mobile.app": "./"}'>
@@ -20,6 +21,7 @@
 		<script>
 			sap.ui.getCore().attachInit(function() {
 				new sap.m.Shell({
+					showLogout: false,
 					app: new sap.ui.core.ComponentContainer({
 						height : "100%",
 						name : "ui5.mobile.app"

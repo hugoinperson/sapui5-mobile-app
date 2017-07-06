@@ -7,6 +7,10 @@ sap.ui.define([
 		
 		onInit: function () {
 			console.log('please log in');
+		},
+
+		onLogin: function () {
+			sap.ui.getCore().getEventBus().publish("app", "routing", {route: "home"});
 		}
 
 	});

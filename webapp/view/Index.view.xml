@@ -4,15 +4,10 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:l="sap.ui.layout"
+	height="100%"
 	displayBlock="true">
-	<App id="app" class="ui5Mobile-app">
-		<l:VerticalLayout width="100%">
-			<FlexBox id="splashPage" >
-				<Text text="111111" />
-			</FlexBox>
-			<FlexBox id="mainPage">
-				<Text text="222222" />
-			</FlexBox>
-		</l:VerticalLayout>
-	</App>
+	<VBox id="app" class="ui5Mobile-app" width="100%">
+		<Page id="splashPage" class="ui5Mobile-splashPage" showHeader="false" visible="{= ${layoutModel>/splash} ? true : false}" />
+		<Page id="mainPage" class="ui5Mobile-mainPage" visible="{= ${layoutModel>/main} ? true : false}" />
+	</VBox>
 </mvc:View>

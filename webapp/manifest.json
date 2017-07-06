@@ -75,6 +75,8 @@
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"async": true,
+				"clearControlAggregation": true,
+				"controlAggregation": "content",
 				"viewType": "XML",
 				"viewPath": "ui5.mobile.app.view"
 			},
@@ -94,10 +96,12 @@
 			},
 			"targets": {
 				"login": {
-					"viewName": "Login"
+					"viewName": "Login",
+					"controlId": "splashPage"
 				},
 				"home": {
-					"viewName": "Home"
+					"viewName": "Home",
+					"controlId": "mainPage"
 				},
 				"error": {
 					"viewName": "Error"
