@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(Controller) {
 	"use strict";
 
-	return Controller.extend("ui5.mobile.app.ui5-mobile-app.controller.Index", {
+	return Controller.extend("ui5.mobile.app.controller.Index", {
 		
 		onInit: function () {
 			sap.ui.Device.media.attachHandler( function (oParam) {

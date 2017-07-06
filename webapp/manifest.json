@@ -1,11 +1,11 @@
 {
 	"_version": "1.5.0",
 	"sap.app": {
-		"id": "ui5.mobile.app.ui5-mobile-app",
+		"id": "ui5.mobile.app",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
-			"version": "1.0.0"
+			"version": "0.0.1"
 		},
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
@@ -39,7 +39,7 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "ui5.mobile.app.ui5-mobile-app.view.Index",
+			"viewName": "ui5.mobile.app.view.Index",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -62,7 +62,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "ui5.mobile.app.ui5-mobile-app.i18n.i18n"
+					"bundleName": "ui5.mobile.app.i18n.i18n"
 				}
 			}
 		},
@@ -70,6 +70,42 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"async": true,
+				"viewType": "XML",
+				"viewPath": "ccux.view",
+				"controlId": "indexApp",
+				"transition": "show",
+				"controlAggregation": "pages"
+			},
+			"routes": {
+				"login": {
+					"pattern": "",
+					"target": "login"
+				},
+				"home": {
+					"pattern": "home",
+					"target": "home"
+				},
+				"error": {
+					"pattern": "",
+					"target": "error"
+				}
+			},
+			"targets": {
+				"login": {
+					"viewName": "Login"
+				},
+				"home": {
+					"viewName": "Home"
+				},
+				"error": {
+					"viewName": "Error"
+				}
+			}
 		}
 	}
 }
