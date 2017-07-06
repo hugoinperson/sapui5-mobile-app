@@ -38,7 +38,7 @@ sap.ui.define([
 		},
 
 		goToPage: function (sChannel, sEvent, oPayload) {
-			if (oPayload.route === 'login') {
+			if (oPayload.route === 'login' || oPayload.route === 'notPhone') {
 				this.useSplashLayout();
 			} else {
 				this.useMainLayout();

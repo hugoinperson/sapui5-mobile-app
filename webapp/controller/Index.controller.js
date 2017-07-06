@@ -6,8 +6,12 @@ sap.ui.define([
 	return Controller.extend("ui5.mobile.app.controller.Index", {
 		
 		onInit: function () {
+			this.coreBus = sap.ui.getCore().getEventBus();
+	
 			sap.ui.Device.media.attachHandler( function (oParam) {
-				// console.log(oParam.name === 'Phone');
+				if (oParam.name !== 'Phone') {
+					this.coreBus.publish("app", "routing", {route: "notPhone"});
+				}
 			}.bind(this), null, sap.ui.Device.media.RANGESETS.SAP_STANDARD);
 		},
 

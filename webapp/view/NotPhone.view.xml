@@ -1,0 +1,15 @@
+<mvc:View
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+
+	<MessagePage
+		showHeader="true"
+		icon="sap-icon://error"
+		title="Not supported"
+		description="For the best viewing experience, go to our main site."
+	  text="Your viewing device is not mobile phone">
+	</MessagePage>
+
+</mvc:View>

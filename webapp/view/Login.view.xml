@@ -2,8 +2,41 @@
 	controllerName="ui5.mobile.app.controller.Login"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true">
-	<Text text="333333" />
-	<Button text="Login" press="onLogin" />
+	<VBox width= "100%" height="100%">
+		<FlexBox width="100%" class="ui5Mobile-splashImage">
+			<Image src="images/logo.png" densityAware="false" width="50%" class="ui5Mobile-logo" />
+			<layoutData>
+				<FlexItemData growFactor="1" />
+			</layoutData>
+		</FlexBox>
+		<VBox width="100%" class="ui5Mobile-loginSec" >
+			<HBox width="100%" alignItems="Center" class="sapUiTinyMarginBottom ui5Mobile-loginField">
+				<Image src="images/user.png" width="30px"/>
+				<Input width="100%" class="ui5Mobile-loginInput">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Input>
+			</HBox>
+			<HBox width="100%" alignItems="Center" class="sapUiTinyMarginBottom ui5Mobile-loginField">
+				<Image src="images/lock.png" width="30px"/>
+				<Input width="100%" type="Password" class="ui5Mobile-loginInput">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Input>
+			</HBox>
+			<HBox width="100%" alignItems="Center" class="sapUiTinyMarginBottom ui5Mobile-loginField">
+				<CheckBox width="30px" selected="false" class="ui5Mobile-rememberCheckBox" />
+				<Label width="100%" text="Remember me" class="ui5Mobile-rememberLabel">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Label>
+			</HBox>
+		</VBox>
+	</VBox>
 </mvc:View>

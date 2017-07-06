@@ -1,5 +1,3 @@
-/* Enter your custom styles here */
-
 /* hide the shell bar */
 .sapMShellBrandingBar {
 	display: none;
@@ -11,4 +9,63 @@
 
 .ui5Mobile-app > .sapMFlexItem {
 	height: 100%;
+}
+
+.ui5Mobile-mainPage > section > .sapUiView,
+.ui5Mobile-splashPage > section > .sapUiView {
+	height: 100%;
+}
+
+.ui5Mobile-splashImage {
+	text-align: center;
+	background-image: url('../images/splash.jpg');
+	background-repeat: no-repeat;
+	background-position: right -300px top 0px;
+}
+
+.ui5Mobile-splashImage .ui5Mobile-logo {
+	margin-top: 15px;
+}
+
+.ui5Mobile-loginSec {
+	padding: 20px 30px;
+	background: white;
+}
+
+.ui5Mobile-loginSec .ui5Mobile-loginField {
+	border-bottom: 1px solid #818090;
+}
+
+.ui5Mobile-loginSec .ui5Mobile-loginField .ui5Mobile-loginInput {
+	padding: 0;
+	height: 2em;
+}
+
+.ui5Mobile-loginSec .ui5Mobile-loginField .ui5Mobile-loginInput input {
+	height: 2em;
+	border: none;
+	font-size: 1rem;
+	background: transparent;
+}
+
+.ui5Mobile-rememberCheckBox {
+	height: 2rem;
+	line-height: 2rem;
+	padding-left: 2rem;
+}
+
+.ui5Mobile-rememberCheckBox .sapMCbBg {
+	left: 0.3rem;
+	top: 0.2rem;
+	height: 1rem;
+	width: 1rem;
+	line-height: 1rem;
+	border-color: #137079;
+	border-width: 2px;
+}
+
+.ui5Mobile-rememberLabel {
+	color: #137079;
+	padding: 0 10px;
+	font-size: 1rem;
 }

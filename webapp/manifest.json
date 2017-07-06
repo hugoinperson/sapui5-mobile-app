@@ -89,6 +89,10 @@
 					"pattern": "home",
 					"target": "home"
 				},
+				"notPhone": {
+					"pattern": "notPhone",
+					"target": "notPhone"
+				},
 				"error": {
 					"pattern": "",
 					"target": "error"
@@ -102,6 +106,10 @@
 				"home": {
 					"viewName": "Home",
 					"controlId": "mainPage"
+				},
+				"notPhone": {
+					"viewName": "NotPhone",
+					"controlId": "splashPage"
 				},
 				"error": {
 					"viewName": "Error"

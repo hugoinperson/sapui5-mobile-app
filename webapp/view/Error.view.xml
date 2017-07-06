@@ -1,0 +1,13 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m">
+
+	<m:MessagePage
+		showHeader="true"
+		icon="sap-icon://error"
+		title="Error"
+		description="Please contact your IT administrator for help."
+	  text="Something went wrong ...">
+	</m:MessagePage>
+
+</mvc:View>
