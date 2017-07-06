@@ -8,10 +8,10 @@
 	<App id="app" class="ui5Mobile-app">
 		<l:VerticalLayout width="100%">
 			<FlexBox id="splashPage" >
-				111111
+				<Text text="111111" />
 			</FlexBox>
 			<FlexBox id="mainPage">
-				222222
+				<Text text="222222" />
 			</FlexBox>
 		</l:VerticalLayout>
 	</App>
