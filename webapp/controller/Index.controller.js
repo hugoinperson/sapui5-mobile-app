@@ -4,6 +4,9 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("ui5.mobile.app.ui5-mobile-app.controller.Index", {
+		onInit () {
+			console.log('hahahahaha')
+		}
 
 	});
 });
