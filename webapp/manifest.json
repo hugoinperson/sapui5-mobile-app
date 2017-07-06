@@ -39,7 +39,7 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "ui5.mobile.app.view.Login",
+			"viewName": "ui5.mobile.app.view.Index",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -76,10 +76,7 @@
 				"routerClass": "sap.m.routing.Router",
 				"async": true,
 				"viewType": "XML",
-				"viewPath": "ui5.mobile.app.view",
-				"controlId": "indexApp",
-				"transition": "show",
-				"controlAggregation": "pages"
+				"viewPath": "ui5.mobile.app.view"
 			},
 			"routes": {
 				"login": {
