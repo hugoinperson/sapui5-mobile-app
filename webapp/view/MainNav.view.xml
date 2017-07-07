@@ -1,0 +1,15 @@
+<mvc:View 
+	controllerName="ui5.mobile.app.controller.MainNav"
+	class="ui5Mobile-mainNavView"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Toolbar>
+		<Button icon="sap-icon://nav-back" class="ui5Mobile-iconBtn" press="onNavBack" />
+		<ToolbarSpacer/>
+		<Text text="{mainNavConfigModel>/title}" />
+		<ToolbarSpacer/>
+		<Button icon="sap-icon://menu2" class="ui5Mobile-iconBtn" />
+	</Toolbar>
+</mvc:View>

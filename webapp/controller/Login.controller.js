@@ -6,11 +6,11 @@ sap.ui.define([
 	return Controller.extend("ui5.mobile.app.controller.Login", {
 		
 		onInit: function () {
-			console.log('please log in');
+			this.coreBus = sap.ui.getCore().getEventBus();
 		},
 
 		onLogin: function () {
-			sap.ui.getCore().getEventBus().publish("app", "routing", {route: "home"});
+			this.coreBus.publish("app", "routing", {route: "payment"});
 		}
 
 	});

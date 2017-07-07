@@ -27,21 +27,21 @@
 	margin-top: 15px;
 }
 
-.ui5Mobile-loginSec {
+.ui5Mobile-loginFormSec {
 	padding: 20px 30px;
 	background: white;
 }
 
-.ui5Mobile-loginSec .ui5Mobile-loginField {
-	border-bottom: 1px solid #818090;
+.ui5Mobile-loginFormSec .ui5Mobile-loginField {
+	border-bottom: 1px solid #CCCCCC;
 }
 
-.ui5Mobile-loginSec .ui5Mobile-loginField .ui5Mobile-loginInput {
+.ui5Mobile-loginFormSec .ui5Mobile-loginField .ui5Mobile-loginInput {
 	padding: 0;
 	height: 2em;
 }
 
-.ui5Mobile-loginSec .ui5Mobile-loginField .ui5Mobile-loginInput input {
+.ui5Mobile-loginFormSec .ui5Mobile-loginField .ui5Mobile-loginInput input {
 	height: 2em;
 	border: none;
 	font-size: 1rem;
@@ -64,8 +64,116 @@
 	border-width: 2px;
 }
 
-.ui5Mobile-rememberLabel {
+.ui5Mobile-loginLabel {
 	color: #137079;
 	padding: 0 10px;
 	font-size: 1rem;
+}
+
+
+/* Main Page - Header */
+
+.ui5Mobile-mainNavView {
+	display: block;
+}
+
+.ui5Mobile-mainPage > header.sapMIBar {
+	background: white;
+}
+
+.ui5Mobile-mainPage header .sapMBarContainer {
+	padding: 0;
+}
+
+/*------------------------------------------------------ PAYMENTS -----------------------------------------------------*/
+
+.ui5Mobile-paymentNavBar {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.ui5Mobile-paymentIconTab {
+	padding: 10px 0;
+}
+
+.ui5Mobile-paymentIconTab-icon {
+	margin-bottom: 5px;
+}
+
+.ui5Mobile-paymentIconTab-label {
+	font-size: 1rem;
+}
+
+.ui5Mobile-paymentIconTab-icon,
+.ui5Mobile-paymentIconTab-label {
+	color: #D1D3D4;
+}
+
+.ui5Mobile-paymentIconTab[data-active="true"] .ui5Mobile-paymentIconTab-icon,
+.ui5Mobile-paymentIconTab[data-active="true"] .ui5Mobile-paymentIconTab-label {
+	color: #38BBCD;
+}
+
+/*------------------------------------------------------ BUTTONS -----------------------------------------------------*/
+
+/* Text Button */
+
+.ui5Mobile-textBtn {
+	padding: 0;
+	height: auto;
+}
+
+.ui5Mobile-textBtn .sapMBtnText,
+.ui5Mobile-textBtn .sapMBtnText.sapMBtnActive {
+	color: #137079;
+	font-size: 1rem;
+	border: none;
+	background: transparent;
+}
+
+.ui5Mobile-textBtn .sapMBtnText .sapMBtnContent {
+	line-height: 2rem;
+}
+
+/* Icon Button */
+
+.ui5Mobile-iconBtn {
+	padding: 0;
+	height: auto;
+}
+
+.ui5Mobile-iconBtn .sapMBtnIconFirst .sapMBtnIcon,
+.ui5Mobile-iconBtn .sapMBtnIconFirst.sapMBtnActive .sapMBtnIcon {
+	color: #137079;
+	font-size: 1rem;
+	border: none;
+	background: transparent;
+}
+
+.ui5Mobile-iconBtn > .sapMBtnIconFirst {
+	background-color: transparent !important;
+}
+
+.ui5Mobile-iconBtn > .sapMBtnIconFirst.sapMBtnActive {
+	background-color: transparent !important;
+	border-color: transparent !important;
+}
+
+
+/* Primary Button */
+
+.ui5Mobile-primaryBtn {
+	width: 100%;
+	padding: 0;
+	height: auto;
+}
+
+.ui5Mobile-primaryBtn .sapMBtnInner {
+	border: none;
+	background: #137079;
+	color: white;
+	border-radius: 0;
+	text-shadow: none;
+	font-size: 1.5em;
+	padding: 6px 12px;
+	height: auto;
 }

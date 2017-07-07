@@ -8,6 +8,6 @@
 	displayBlock="true">
 	<VBox id="app" class="ui5Mobile-app" width="100%">
 		<Page id="splashPage" class="ui5Mobile-splashPage" showHeader="false" visible="{= ${layoutModel>/splash} ? true : false}" />
-		<Page id="mainPage" class="ui5Mobile-mainPage" visible="{= ${layoutModel>/main} ? true : false}" />
+		<Page id="mainPage" class="ui5Mobile-mainPage" showHeader="true" visible="{= ${layoutModel>/main} ? true : false}" />
 	</VBox>
 </mvc:View>

@@ -28,6 +28,7 @@ sap.ui.define([
 			this._oLayoutModel = new JSONModel({splash: true, main: false});
 			this.setModel(this._oLayoutModel, "layout");
 
+			this._currentRoute = "";
 			this.getRouter().initialize();
 			this.subscribeEvent();
 		},
@@ -43,8 +44,13 @@ sap.ui.define([
 			} else {
 				this.useMainLayout();
 			}
+			this._currentRoute = oPayload.route;
       this.getRouter().navTo(oPayload.route);
     },
+
+		getCurrentRoute: function () {
+			return this._currentRoute;
+		},
 
 		useSplashLayout: function () {
 			this._oLayoutModel.setProperty('/splash', true);

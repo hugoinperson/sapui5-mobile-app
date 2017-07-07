@@ -1,0 +1,46 @@
+<mvc:View
+	controllerName="ui5.mobile.app.controller.payment.main"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+  displayBlock="true">
+	<HBox id="ui5Mobile-paymentNavBar" class="ui5Mobile-paymentNavBar">
+		<VBox alignItems="Center" justifyContent="Center" class="ui5Mobile-paymentIconTab" data:key="BillTab">
+			<core:Icon src="sap-icon://vertical-bar-chart" size="30px" class="ui5Mobile-paymentIconTab-icon" />
+			<Label text="My Bill" class="ui5Mobile-paymentIconTab-label"/>
+			<customData>
+				<core:CustomData key="active" value="{= ${paymentConfigModel>/BillTab} ? 'true' : 'false' }" writeToDom="true" />
+			</customData>
+			<layoutData>
+				<FlexItemData growFactor="1" />
+			</layoutData>
+		</VBox>
+		<VBox alignItems="Center" justifyContent="Center" class="ui5Mobile-paymentIconTab" data:key="PaymentTab">
+			<core:Icon src="sap-icon://lead" size="30px" class="ui5Mobile-paymentIconTab-icon" />
+			<Label text="Payments" class="ui5Mobile-paymentIconTab-label"/>
+			<customData>
+				<core:CustomData key="active" value="{= ${paymentConfigModel>/PaymentTab} ? 'true' : 'false' }" writeToDom="true" />
+			</customData>
+			<layoutData>
+				<FlexItemData growFactor="1" />
+			</layoutData>
+		</VBox>
+		<VBox alignItems="Center" justifyContent="Center" class="ui5Mobile-paymentIconTab" data:key="SettingsTab">
+			<core:Icon src="sap-icon://action-settings" size="30px" class="ui5Mobile-paymentIconTab-icon" />
+			<Label text="Settings" class="ui5Mobile-paymentIconTab-label"/>
+			<customData>
+				<core:CustomData key="active" value="{= ${paymentConfigModel>/SettingsTab} ? 'true' : 'false' }" writeToDom="true" />
+			</customData>
+			<layoutData>
+				<FlexItemData growFactor="1" />
+			</layoutData>
+		</VBox>
+	</HBox>
+	<NavContainer id="ui5Mobile-payment-pagesContainer" width="100%">
+		<mvc:XMLView viewName="ui5.mobile.app.view.payment.BillTab" data:tabPageName="BillTab" />
+		<mvc:XMLView viewName="ui5.mobile.app.view.payment.PaymentTab" data:tabPageName="PaymentTab" />
+		<mvc:XMLView viewName="ui5.mobile.app.view.payment.SettingsTab" data:tabPageName="SettingsTab" />
+	</NavContainer>
+</mvc:View>

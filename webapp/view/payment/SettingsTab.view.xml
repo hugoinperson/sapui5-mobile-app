@@ -1,0 +1,9 @@
+<mvc:View 
+	class="ui5Mobile-mainNavView"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	height="100%"
+	displayBlock="true">
+	<Text text="3333" />
+</mvc:View>

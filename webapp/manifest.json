@@ -76,7 +76,6 @@
 				"routerClass": "sap.m.routing.Router",
 				"async": true,
 				"clearControlAggregation": true,
-				"controlAggregation": "content",
 				"viewType": "XML",
 				"viewPath": "ui5.mobile.app.view"
 			},
@@ -85,9 +84,9 @@
 					"pattern": "",
 					"target": "login"
 				},
-				"home": {
-					"pattern": "home",
-					"target": "home"
+				"payment": {
+					"pattern": "payment",
+					"target": ["mainNav", "payment"]
 				},
 				"notPhone": {
 					"pattern": "notPhone",
@@ -101,18 +100,28 @@
 			"targets": {
 				"login": {
 					"viewName": "Login",
+					"controlAggregation": "content",
 					"controlId": "splashPage"
 				},
-				"home": {
-					"viewName": "Home",
+				"mainNav": {
+					"viewName": "MainNav",
+					"controlAggregation": "headerContent",
+					"controlId": "mainPage"
+				},
+				"payment": {
+					"viewName": "payment.main",
+					"controlAggregation": "content",
 					"controlId": "mainPage"
 				},
 				"notPhone": {
 					"viewName": "NotPhone",
+					"controlAggregation": "content",
 					"controlId": "splashPage"
 				},
 				"error": {
-					"viewName": "Error"
+					"viewName": "Error",
+					"controlAggregation": "content",
+					"controlId": "splashPage"
 				}
 			}
 		}

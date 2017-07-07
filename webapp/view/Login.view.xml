@@ -12,7 +12,7 @@
 				<FlexItemData growFactor="1" />
 			</layoutData>
 		</FlexBox>
-		<VBox width="100%" class="ui5Mobile-loginSec" >
+		<VBox width="100%" class="ui5Mobile-loginFormSec" >
 			<HBox width="100%" alignItems="Center" class="sapUiTinyMarginBottom ui5Mobile-loginField">
 				<Image src="images/user.png" width="30px"/>
 				<Input width="100%" class="ui5Mobile-loginInput">
@@ -28,15 +28,18 @@
 						<FlexItemData growFactor="1" />
 					</layoutData>
 				</Input>
+				<Button width="100%" text="Forgot?" class="ui5Mobile-textBtn" />
 			</HBox>
 			<HBox width="100%" alignItems="Center" class="sapUiTinyMarginBottom ui5Mobile-loginField">
 				<CheckBox width="30px" selected="false" class="ui5Mobile-rememberCheckBox" />
-				<Label width="100%" text="Remember me" class="ui5Mobile-rememberLabel">
+				<Label width="100%" text="Remember me" class="ui5Mobile-loginLabel">
 					<layoutData>
 						<FlexItemData growFactor="1" />
 					</layoutData>
 				</Label>
+				<Button width="100%" text="Sign up" class="ui5Mobile-textBtn" />
 			</HBox>
 		</VBox>
+		<Button type="Default" text="Log In" press="onLogin" class="ui5Mobile-primaryBtn" />
 	</VBox>
 </mvc:View>
