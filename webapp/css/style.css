@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
 /* hide the shell bar */
 .sapMShellBrandingBar {
 	display: none;
@@ -122,13 +128,15 @@
 
 .ui5Mobile-paymentTab-amountDueLabel {
 	font-size: 1.2rem;
-	font-weight: bold;
-	padding: 20px 10px;
+	font-weight: 600;
+	padding: 20px 10px 10px 10px;
 }
 
 .ui5Mobile-paymentTab-amountDueAmount {
 	font-size: 4rem;
+	font-weight: 300;
 	color: #38BBCD;
+	line-height: 1em;
 }
 
 .ui5Mobile-paymentTab-payInfo {
@@ -205,4 +213,11 @@
 	font-size: 1.5em;
 	padding: 6px 12px;
 	height: auto;
+}
+
+/*------------------------------------------------------ FONTS -----------------------------------------------------*/
+
+.sapMBtnContent,
+.sapMLabel {
+	font-family: 'Open Sans', sans-serif;
 }

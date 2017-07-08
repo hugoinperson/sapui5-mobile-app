@@ -1,6 +1,6 @@
 <mvc:View
 	class="ui5Mobile-paymentPage"
-	controllerName="ui5.mobile.app.controller.payment.main"
+	controllerName="ui5.mobile.app.controller.payment.Main"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core"

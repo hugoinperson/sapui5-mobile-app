@@ -1,4 +1,5 @@
-<mvc:View 
+<mvc:View
+	controllerName="ui5.mobile.app.controller.payment.PaymentTab"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"

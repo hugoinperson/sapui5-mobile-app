@@ -109,7 +109,7 @@
 					"controlId": "mainPage"
 				},
 				"payment": {
-					"viewName": "payment.main",
+					"viewName": "payment.Main",
 					"controlAggregation": "content",
 					"controlId": "mainPage"
 				},

@@ -1,30 +1,24 @@
-sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
-	"use strict";
+sap.ui.define(
+	[
+		'ui5/mobile/app/control/BaseController'
+	],
+	function (BaseController) {
+	
+		'use strict';
 
-	return Controller.extend("ui5.mobile.app.controller.Index", {
+		var Controller = BaseController.extend("ui5.mobile.app.controller.Index");
 		
-		onInit: function () {
-			this.coreBus = sap.ui.getCore().getEventBus();
+		Controller.prototype.onInit = function () {
+			BaseController.prototype.onInit.call(this, arguments);			
+		};
 
-			sap.ui.Device.media.attachHandler( function (oParam) {
-				if (oParam.name !== 'Phone') {
-					this.coreBus.publish("app", "routing", {route: "notPhone"});
-				}
-			}.bind(this), null, sap.ui.Device.media.RANGESETS.SAP_STANDARD);
-		},
-
-		onBeforeRendering: function () {
+		Controller.prototype.onBeforeRendering = function () {
+			BaseController.prototype.onBeforeRendering.call(this, arguments);
+			
 			this._oLayoutModel = this.getOwnerComponent().getModel("layout");
 			this.getView().setModel(this._oLayoutModel, "layoutModel");
-			
-			// Only run on mobile phone
-			var deviceInfo = this.getOwnerComponent().getModel("device").getData();
-			if (!deviceInfo.system.phone) {
-				this.coreBus.publish("app", "routing", {route: "notPhone"});
-			}
-		}
+		};
 
-	});
-});
+		return Controller;
+	}
+);

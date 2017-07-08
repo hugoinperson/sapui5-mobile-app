@@ -1,12 +1,15 @@
-sap.ui.define([
-	'sap/ui/core/mvc/Controller',
-	'sap/ui/model/json/JSONModel'
-], function(Controller, JSONModel) {
-	"use strict";
+sap.ui.define(
+	[
+		'ui5/mobile/app/control/BaseController',
+		'sap/ui/model/json/JSONModel'
+	],
+	function (BaseController, JSONModel) {
+	
+		'use strict';
 
-	return Controller.extend("ui5.mobile.app.controller.payment.main", {
+		var Controller = BaseController.extend('ui5.mobile.app.controller.payment.Main');
 		
-		onInit: function () {
+		Controller.prototype.onInit = function () {
 			var that = this;
 
 			this.coreBus = sap.ui.getCore().getEventBus();
@@ -23,27 +26,29 @@ sap.ui.define([
 			});
 
 			this.onIconTabClicked.bind(this)
-		},
+		};
 
-		onBeforeRendering: function () {
+		Controller.prototype.onBeforeRendering = function () {
+			BaseController.prototype.onBeforeRendering.call(this, arguments);
+
 			this._resetTabs();
-		},
+		};
 
-		_resetTabs: function () {
+		Controller.prototype._resetTabs = function () {
 			this._clearTabs();
 			this._oPaymentConfigModel.setProperty('/BillTab', true);
 			this._renderage();
-		},
+		};
 
-		_clearTabs: function () {
+		Controller.prototype._clearTabs = function () {
 			this._oPaymentConfigModel.setData({
 				BillTab: false,
 				PaymentTab: false,
 				SettingsTab: false
 			});
-		},
+		};
 
-		_renderage: function () {
+		Controller.prototype._renderage = function () {
 			var that = this;
 			var pages = this.pagesContainer.getPages();
 			var tabConfig = this._oPaymentConfigModel.getData();
@@ -54,21 +59,22 @@ sap.ui.define([
 					that.pagesContainer.to(page, 'show');
 				}
 			});
-		},
+		};
 
-		onLogout: function () {
+		Controller.prototype.onLogout = function () {
 			this.coreBus.publish('app', 'routing', {route: 'login'});
-		},
+		};
 
 		// TODO: need to re-write this
-		onIconTabClicked: function (oEvent, a, b) {
+		Controller.prototype.onIconTabClicked = function (oEvent, a, b) {
 			var key = this.data('key');
 			var controller = this.getParent().getParent().getController();
 			
 			controller._clearTabs();
 			controller._oPaymentConfigModel.setProperty('/' + key, true);
 			controller._renderage();
-		}
+		};
 
-	});
-});
+		return Controller;
+	}
+);

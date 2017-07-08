@@ -28,28 +28,13 @@ sap.ui.define([
 			this._oLayoutModel = new JSONModel({splash: true, main: false});
 			this.setModel(this._oLayoutModel, "layout");
 
-			this._currentRoute = "";
+			this._currentRoute = '';
 			this.getRouter().initialize();
-			this.subscribeEvent();
 		},
 
-		subscribeEvent: function () {
-			var oCoreEventBus = sap.ui.getCore().getEventBus();
-      oCoreEventBus.subscribe("app", "routing", this.goToPage, this);
+		setCurrentRoute: function (sRouteName) {
+			this._currentRoute = sRouteName;
 		},
-
-		goToPage: function (sChannel, sEvent, oPayload) {
-			if (oPayload.route === 'login' || oPayload.route === 'notPhone') {
-				this.useSplashLayout();
-			} else {
-				this.useMainLayout();
-			}
-			this._currentRoute = oPayload.route;
-			setTimeout(function () {
-				this.getRouter().navTo(oPayload.route);
-			}.bind(this), 0);
-			
-    },
 
 		getCurrentRoute: function () {
 			return this._currentRoute;

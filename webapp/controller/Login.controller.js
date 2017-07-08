@@ -1,17 +1,24 @@
-sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
-	"use strict";
+sap.ui.define(
+	[
+		'ui5/mobile/app/control/BaseController'
+	],
+	function (BaseController) {
+	
+		'use strict';
 
-	return Controller.extend("ui5.mobile.app.controller.Login", {
-		
-		onInit: function () {
-			this.coreBus = sap.ui.getCore().getEventBus();
-		},
+		var Controller = BaseController.extend('ui5.mobile.app.controller.Login');
 
-		onLogin: function () {
-			this.coreBus.publish("app", "routing", {route: "payment"});
-		}
+		Controller.prototype.onInit = function () {
+		};
 
-	});
-});
+		Controller.prototype.onBeforeRendering = function () {
+			BaseController.prototype.onBeforeRendering.call(this, arguments);
+		};
+
+		Controller.prototype.onLogin = function () {
+			this.navTo('payment');
+		};
+
+		return Controller;
+	}
+);
