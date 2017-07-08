@@ -76,8 +76,9 @@ body {
 	font-size: 1rem;
 }
 
+/*------------------------------------------------------ MAIN PAGE LAYOUT -----------------------------------------------------*/
 
-/* Main Page - Header */
+/* Header - Nav Bar */
 
 .ui5Mobile-mainNavView {
 	display: block;
@@ -91,10 +92,16 @@ body {
 	padding: 0;
 }
 
+.ui5Mobile-mainNavView .ui5Mobile-iconBtn .sapMBtnIconFirst .sapMBtnIcon,
+.ui5Mobile-mainNavView .ui5Mobile-iconBtn .sapMBtnIconFirst.sapMBtnActive .sapMBtnIcon {
+	color: #137079;
+	font-size: 1rem;
+}
 /*------------------------------------------------------ PAYMENTS -----------------------------------------------------*/
 
 .ui5Mobile-paymentPage {
 	display: flex;
+	background: white;
 	flex-direction: column;
 }
 
@@ -139,6 +146,22 @@ body {
 	line-height: 1em;
 }
 
+.ui5Mobile-paymentTab-amountDueWarning {
+	color: #E03131;
+	font-weight: 400;
+}
+
+.ui5Mobile-selectPaymentLabel {
+	padding: 0 10px;
+	color: #666666;
+	font-size: 1.2em;
+}
+
+.ui5Mobile-selectPaymentBtn .sapMBtnIconFirst .sapMBtnIcon {
+	color: #666666;
+	font-size: 1rem;
+}
+
 .ui5Mobile-paymentTab-payInfo {
 	width: 100%;
 	padding: 6px 30px;
@@ -148,6 +171,39 @@ body {
 
 .ui5Mobile-paymentTab-payInfoLabel {
 	font-weight: bold;
+}
+
+.ui5Mobile-paymentTab-carousel .sapMCrslControlsNoArrows.sapMCrslControlsBottom {
+	border: none;
+}
+
+@media (max-height: 800px) {
+	.ui5Mobile-paymentTab-carousel .sapMCrslItem {
+		height: 200px;
+	}
+}
+
+@media (max-height: 700px) {
+	.ui5Mobile-paymentTab-carousel .sapMCrslItem {
+		height: 175px;
+	}
+}
+
+.ui5Mobile-paymentTab-creditCard {
+	background: linear-gradient(#02A8D0, #0B5E79);
+	color: white;
+	width: 200px;
+	height: 100px;
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.ui5Mobile-addPaymentMethodBtn .sapMBtnIcon {
+	color: #666666;
+	font-size: 3em;
 }
 
 /*------------------------------------------------------ BUTTONS -----------------------------------------------------*/
@@ -180,14 +236,13 @@ body {
 
 .ui5Mobile-iconBtn .sapMBtnIconFirst .sapMBtnIcon,
 .ui5Mobile-iconBtn .sapMBtnIconFirst.sapMBtnActive .sapMBtnIcon {
-	color: #137079;
-	font-size: 1rem;
 	border: none;
 	background: transparent;
 }
 
 .ui5Mobile-iconBtn > .sapMBtnIconFirst {
 	background-color: transparent !important;
+	border: none !important;
 }
 
 .ui5Mobile-iconBtn > .sapMBtnIconFirst.sapMBtnActive {

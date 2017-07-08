@@ -8,10 +8,33 @@
 		<VBox width="100%" alignItems="Center">
 			<Label class="ui5Mobile-paymentTab-amountDueLabel" text="Amount Due:" />
 			<Label class="ui5Mobile-paymentTab-amountDueAmount" text="$132.36" />
+			<Label class="ui5Mobile-paymentTab-amountDueWarning" text="Due December 5, 2016" />
 			<layoutData>
 				<FlexItemData growFactor="1" />
 			</layoutData>
 		</VBox>
+		<!--Select Payment-->
+		<HBox alignItems="Center" justifyContent="Center">
+			<Button icon="sap-icon://nav-back" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onPaymentPrev" />
+			<Text text="Select Payment" class="ui5Mobile-selectPaymentLabel" />
+			<Button icon="sap-icon://navigation-right-arrow" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onPaymentNext" />
+		</HBox>
+		<!--Carousel-->
+		<Carousel id="ui5Mobile-paymentTab-carousel" class="ui5Mobile-paymentTab-carousel">
+			<pages>
+				<HBox alignItems="Center" justifyContent="Center" height="100%">
+					<Image src="images/apple-pay.png" width="140px" alt="Example picture of USB flash drive" />
+				</HBox>
+				<HBox alignItems="Center" justifyContent="Center" height="100%">
+					<Label text="•••• •••• •••• 1234" class="ui5Mobile-paymentTab-creditCard"/>
+				</HBox>
+				<HBox alignItems="Center" justifyContent="Center" height="100%">
+					<Button icon="sap-icon://add" class="ui5Mobile-iconBtn ui5Mobile-addPaymentMethodBtn"/>
+				</HBox>
+
+			</pages>
+		</Carousel>
+		<!--Payment Info-->
 		<HBox class="ui5Mobile-paymentTab-payInfo" justifyContent="SpaceBetween" alignItems="Center">
 			<Label class="ui5Mobile-paymentTab-payInfoLabel" text="Payment Date:" />
 			<Label class="ui5Mobile-paymentTab-payInfoVal" text="12/5/16" />
