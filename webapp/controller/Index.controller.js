@@ -7,6 +7,12 @@ sap.ui.define([
 		
 		onInit: function () {
 			this.coreBus = sap.ui.getCore().getEventBus();
+
+			sap.ui.Device.media.attachHandler( function (oParam) {
+				if (oParam.name !== 'Phone') {
+					this.coreBus.publish("app", "routing", {route: "notPhone"});
+				}
+			}.bind(this), null, sap.ui.Device.media.RANGESETS.SAP_STANDARD);
 		},
 
 		onBeforeRendering: function () {

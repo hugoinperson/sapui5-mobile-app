@@ -1,9 +1,24 @@
 <mvc:View 
-	class="ui5Mobile-mainNavView"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	height="100%"
 	displayBlock="true">
-	<Text text="2222" />
+	<VBox height="100%">
+		<VBox width="100%" alignItems="Center">
+			<Label class="ui5Mobile-paymentTab-amountDueLabel" text="Amount Due:" />
+			<Label class="ui5Mobile-paymentTab-amountDueAmount" text="$132.36" />
+			<layoutData>
+				<FlexItemData growFactor="1" />
+			</layoutData>
+		</VBox>
+		<HBox class="ui5Mobile-paymentTab-payInfo" justifyContent="SpaceBetween" alignItems="Center">
+			<Label class="ui5Mobile-paymentTab-payInfoLabel" text="Payment Date:" />
+			<Label class="ui5Mobile-paymentTab-payInfoVal" text="12/5/16" />
+		</HBox>
+		<HBox class="ui5Mobile-paymentTab-payInfo" justifyContent="SpaceBetween" alignItems="Center">
+			<Label class="ui5Mobile-paymentTab-payInfoLabel" text="Pay Amount:"/>
+			<Label class="ui5Mobile-paymentTab-payInfoVal" text="$132.36"/>
+		</HBox>
+		<Button type="Default" text="Confirm Payment" press="onLogin" class="ui5Mobile-primaryBtn" />
+	</VBox>
 </mvc:View>

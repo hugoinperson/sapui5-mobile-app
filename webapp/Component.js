@@ -45,7 +45,10 @@ sap.ui.define([
 				this.useMainLayout();
 			}
 			this._currentRoute = oPayload.route;
-      this.getRouter().navTo(oPayload.route);
+			setTimeout(function () {
+				this.getRouter().navTo(oPayload.route);
+			}.bind(this), 0);
+			
     },
 
 		getCurrentRoute: function () {

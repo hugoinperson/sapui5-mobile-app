@@ -87,6 +87,11 @@
 
 /*------------------------------------------------------ PAYMENTS -----------------------------------------------------*/
 
+.ui5Mobile-paymentPage {
+	display: flex;
+	flex-direction: column;
+}
+
 .ui5Mobile-paymentNavBar {
 	border-bottom: 1px solid #CCCCCC;
 }
@@ -111,6 +116,30 @@
 .ui5Mobile-paymentIconTab[data-active="true"] .ui5Mobile-paymentIconTab-icon,
 .ui5Mobile-paymentIconTab[data-active="true"] .ui5Mobile-paymentIconTab-label {
 	color: #38BBCD;
+}
+
+/* Payment Tab */
+
+.ui5Mobile-paymentTab-amountDueLabel {
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 20px 10px;
+}
+
+.ui5Mobile-paymentTab-amountDueAmount {
+	font-size: 4rem;
+	color: #38BBCD;
+}
+
+.ui5Mobile-paymentTab-payInfo {
+	width: 100%;
+	padding: 6px 30px;
+	height: 50px;
+	border-top: 1px solid #CCCCCC;
+}
+
+.ui5Mobile-paymentTab-payInfoLabel {
+	font-weight: bold;
 }
 
 /*------------------------------------------------------ BUTTONS -----------------------------------------------------*/

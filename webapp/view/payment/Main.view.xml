@@ -1,4 +1,5 @@
 <mvc:View
+	class="ui5Mobile-paymentPage"
 	controllerName="ui5.mobile.app.controller.payment.main"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns="sap.m"
@@ -38,7 +39,7 @@
 			</layoutData>
 		</VBox>
 	</HBox>
-	<NavContainer id="ui5Mobile-payment-pagesContainer" width="100%">
+	<NavContainer id="ui5Mobile-payment-pagesContainer" class="ui5Mobile-payment-pagesContainer" width="100%">
 		<mvc:XMLView viewName="ui5.mobile.app.view.payment.BillTab" data:tabPageName="BillTab" />
 		<mvc:XMLView viewName="ui5.mobile.app.view.payment.PaymentTab" data:tabPageName="PaymentTab" />
 		<mvc:XMLView viewName="ui5.mobile.app.view.payment.SettingsTab" data:tabPageName="SettingsTab" />
