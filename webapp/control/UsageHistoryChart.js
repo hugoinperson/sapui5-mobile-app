@@ -68,7 +68,7 @@ sap.ui.define(
 		};
 
 		CustomControl.prototype._createChart = function () {
-			var oMargin = { top: 20, right: 20, bottom: 30, left: 30 };
+			var oMargin = { top: 20, right: 20, bottom: 20, left: 20 };
 			var width = this.getWidth() - oMargin.left - oMargin.right;
 			var height = this.getHeight() - oMargin.top - oMargin.bottom;
 			var dataSet = this._getDataSet();

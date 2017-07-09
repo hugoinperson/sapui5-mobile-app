@@ -255,6 +255,69 @@ body {
 	background: #38BBCD;
 }
 
+.ui5Mobile-usageHistoryChart-xAxis {
+	padding: 0 20px;
+}
+
+.ui5Mobile-usageHistoryChart-xAxisLine {
+	width: inherit;
+	margin: 0 10px;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 2px solid #CCCCCC;
+	padding: 0; 
+}
+
+.ui5Mobile-usageHistoryChart-xAxisLabel {
+	color: #CCCCCC;
+}
+
+.ui5Mobile-billTab-usageSec {
+	padding: 0 20px 20px 20px;
+	flex: 1;
+}
+
+.ui5Mobile-billTab-usageBlock {
+	border-right: 2px solid #666666;
+}
+
+.ui5Mobile-billTab-usageBlock:last-child {
+	border: none;
+}
+
+.ui5Mobile-billTab-valBlock {
+	padding: 10px 0;
+}
+
+.ui5Mobile-billTab-usageTitle {
+	font-size: 18px;
+	color: #666666;
+}
+
+.ui5Mobile-billTab-usageValText {
+	font-size: 52px;
+	color: #666666;
+	font-weight: 300;
+}
+
+.ui5Mobile-billTab-usageValText.highlight {
+	color: #38BBCD;
+}
+
+.ui5Mobile-billTab-usageValLabel {
+	color: #666666;
+	padding: 12px 0;
+}
+
+.ui5Mobile-billTab-usageValLabel.highlight {
+	color: #38BBCD;
+}
+
+.ui5Mobile-billTab-lastMonthText {
+	color: #CCCCCC;
+}
+
 /*------------------------------------------------------ BUTTONS -----------------------------------------------------*/
 
 /* Text Button */
@@ -321,6 +384,7 @@ body {
 
 /*------------------------------------------------------ FONTS -----------------------------------------------------*/
 
+.sapMText,
 .sapMBtnContent,
 .sapMLabel {
 	font-family: 'Open Sans', sans-serif;

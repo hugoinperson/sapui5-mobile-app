@@ -3,6 +3,7 @@
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
 	xmlns:c="ui5.mobile.app.control"
 	displayBlock="true">
 	<VBox height="100%" alignItems="Center">
@@ -24,6 +25,53 @@
 			</HBox>
 		</HBox>
 		<!--Line Chart-->
-		<c:UsageHistoryChart id="ui5Mobile-usageHistoryChart" width="380" height="300" />
+		<c:UsageHistoryChart id="ui5Mobile-usageHistoryChart" width="380" height="240" />
+		<HBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-usageHistoryChart-xAxis">
+			<Text text="Nov" class="ui5Mobile-usageHistoryChart-xAxisLabel" />
+			<core:HTML content='&lt;hr class=&quot;ui5Mobile-usageHistoryChart-xAxisLine&quot;&gt;'>
+				<core:layoutData>
+					<FlexItemData growFactor="1" />
+				</core:layoutData>
+			</core:HTML>
+			<Text text="Dev" class="ui5Mobile-usageHistoryChart-xAxisLabel" />
+		</HBox>
+		<!--Usage-->
+		<HBox alignItems="End" justifyContent="Center" width="100%" class="ui5Mobile-billTab-usageSec">
+			<VBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-billTab-usageBlock">
+				<Text text="Energy Usage" class="ui5Mobile-billTab-usageTitle" />
+				<HBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-billTab-valBlock">
+					<Text text="143" class="ui5Mobile-billTab-usageValText" />
+					<Text text="kWh" class="ui5Mobile-billTab-usageValLabel" >
+						<layoutData>
+							<FlexItemData alignSelf="Start" />
+						</layoutData>
+					</Text>
+				</HBox>
+				<Text text="Last Month: 112kWh" class="ui5Mobile-billTab-lastMonthText" />
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</VBox>
+			<VBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-billTab-usageBlock">
+				<Text text="Total Cost" class="ui5Mobile-billTab-usageTitle" />
+				<HBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-billTab-valBlock">
+					<Text text="$" class="ui5Mobile-billTab-usageValLabel highlight" >
+						<layoutData>
+							<FlexItemData alignSelf="Start" />
+						</layoutData>
+					</Text>
+					<Text text="132" class="ui5Mobile-billTab-usageValText highlight" />
+					<Text text="36" class="ui5Mobile-billTab-usageValLabel highlight">
+						<layoutData>
+							<FlexItemData alignSelf="End" />
+						</layoutData>
+					</Text>
+				</HBox>
+				<Text text="Last Month: $102.32" class="ui5Mobile-billTab-lastMonthText" />
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</VBox>
+		</HBox>
 	</VBox>
 </mvc:View>
