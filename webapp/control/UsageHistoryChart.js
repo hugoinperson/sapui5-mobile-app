@@ -39,8 +39,7 @@ sap.ui.define(
 		};
 
 		CustomControl.prototype.refreshChart = function () {
-			// this.rerender();
-			this._reDraw();
+			this.rerender();
 		};
 
 		CustomControl.prototype.setDataModel = function (model) {
@@ -66,126 +65,6 @@ sap.ui.define(
 					meterReadDate: dateParser(data.meterReadDate)
 				};
 			}, this);
-		};
-
-		CustomControl.prototype._reDraw = function () {
-			var oMargin = { top: 20, right: 20, bottom: 20, left: 20 };
-			var width = this.getWidth() - oMargin.left - oMargin.right;
-			var height = this.getHeight() - oMargin.top - oMargin.bottom;
-			var dataSet = this._getDataSet();
-
-			// Base X scale - meter reading date
-			var xScaleDomain = d3.extent(dataSet, function (data) {
-				return data.meterReadDate;
-			});
-			xScaleDomain[0] = new Date(xScaleDomain[0].getFullYear(), xScaleDomain[0].getMonth(), 1); // Beginning of month of smallest date
-			xScaleDomain[1] = new Date(xScaleDomain[1].getFullYear(), xScaleDomain[1].getMonth() + 1, 0); // End of month of biggest date
-
-			var xScale = d3.time.scale().domain(xScaleDomain).range([0, width]);
-
-			// Base Y scale
-			var yAxisTickSize = 5;
-			var maxKwhUsage = d3.max(dataSet, function (data) { return data.kwhUsage; });
-			var maxGasUsage = d3.max(dataSet, function (data) { return data.gasUsage; });
-			var maxUsage = Math.max(maxKwhUsage, maxGasUsage);
-
-			var yScale = d3.scale.linear().domain([0, maxUsage + (yAxisTickSize - (maxUsage % yAxisTickSize))]).range([height, 0]);
-
-			// kwh usage line
-			var usageLine1 = d3.svg.line()
-				.interpolate('monotone')
-				.x(function (data) {
-					return xScale(data.meterReadDate);
-				})
-				.y(function (data) {
-					return yScale(data.kwhUsage);
-				});
-			
-			// gas usage line
-			var usageLine2 = d3.svg.line()
-				.interpolate('monotone')
-				.x(function (data) {
-					return xScale(data.meterReadDate);
-				})
-				.y(function (data) {
-					return yScale(data.gasUsage);
-				});
-
-			var oCanvas = d3.select('#' + this.getId());
-
-			oCanvas.select('path.ui5Mobile-usageHistoryChart-kwhUsageLine')
-				.transition()
-				.attr('d', usageLine1(dataSet));
-
-			oCanvas.select('path.ui5Mobile-usageHistoryChart-gasUsageLine')
-				.transition()
-				.attr('d', usageLine2(dataSet));
-
-			// kwh usage data points
-			var kwhUsageDataPoint = oCanvas.selectAll('circle.ui5Mobile-usageHistoryChart-kwhUsageDataPoint')
-				.data(dataSet)
-				.attr('cx', function (data) {
-					return xScale(data.meterReadDate);
-				})
-				.attr('cy', function (data) {
-					return yScale(data.kwhUsage);
-				});
-
-			// kwh usage data points
-			var gasUsageDataPoint = oCanvas.selectAll('circle.ui5Mobile-usageHistoryChart-gasUsageDataPoint')
-				.data(dataSet)
-				.attr('cx', function (data) {
-					return xScale(data.meterReadDate);
-				})
-				.attr('cy', function (data) {
-					return yScale(data.gasUsage);
-				})
-				.attr('class', 'ui5Mobile-usageHistoryChart-gasUsageDataPoint');
-
-			// kwh usage data point tooltip
-			var kwhUsageDataPointTooltip = oCanvas.select('.ui5Mobile-usageHistoryChart-kwhUsageDataPointTooltip');
-
-			// gas usage data point tooltip
-			var gasUsageDataPointTooltip = oCanvas.select('.ui5Mobile-usageHistoryChart-gasUsageDataPointTooltip');
-
-			function onKwhDataPointMouseOver(data) {
-				var aCircleXY = [xScale(data.meterReadDate), yScale(data.kwhUsage)];
-
-				kwhUsageDataPointTooltip.select('path')
-					.attr('transform', 'translate(' + [aCircleXY[0] - 52, aCircleXY[1] - 55] + ')');
-
-				kwhUsageDataPointTooltip.select('text')
-					.attr('transform', 'translate(' + [aCircleXY[0], aCircleXY[1] - 40] + ')')
-					.text(data.kwhUsage);
-
-				kwhUsageDataPointTooltip.style('display', null);
-			}
-
-			function onGasDataPointMouseOver(data) {
-				var aCircleXY = [xScale(data.meterReadDate), yScale(data.gasUsage)];
-
-				gasUsageDataPointTooltip.select('path')
-					.attr('transform', 'translate(' + [aCircleXY[0] - 52, aCircleXY[1] - 55] + ')');
-
-				gasUsageDataPointTooltip.select('text')
-					.attr('transform', 'translate(' + [aCircleXY[0], aCircleXY[1] - 40] + ')')
-					.text(data.gasUsage);
-
-				gasUsageDataPointTooltip.style('display', null);
-			}
-
-			function onKwhDataPointMouseOut(data) {
-				kwhUsageDataPointTooltip.style('display', 'none');
-			}
-
-			function onGasDataPointMouseOut(data) {
-				gasUsageDataPointTooltip.style('display', 'none');
-			}
-
-			kwhUsageDataPoint.on('mouseover', onKwhDataPointMouseOver);
-			kwhUsageDataPoint.on('mouseout', onKwhDataPointMouseOut);
-			gasUsageDataPoint.on('mouseover', onGasDataPointMouseOver);
-			gasUsageDataPoint.on('mouseout', onGasDataPointMouseOut);
 		};
 
 		CustomControl.prototype._createChart = function () {

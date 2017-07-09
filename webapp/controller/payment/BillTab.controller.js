@@ -24,9 +24,11 @@ sap.ui.define(
 
 		Controller.prototype._setGraphData = function () {
 			var config = this._oBillTabConfigModel.getData();
-			this._oGraphModel.setData(this._getMockData(config.currentMonth, config.currentYear));
+			this._oGraphModel.setData(this._getMockData(config.currentMonth + 1, config.currentYear));
 			this._oGraph.setDataModel(this._oGraphModel);
-			this._oGraph.refreshChart();
+			setTimeout(function () {
+				this._oGraph.refreshChart();
+			}.bind(this), 0);
 		};
 
 		Controller.prototype._getConfigData = function (currentDate) {
