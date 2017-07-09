@@ -5,12 +5,23 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:c="ui5.mobile.app.control"
 	displayBlock="true">
-	<VBox height="100%">
+	<VBox height="100%" alignItems="Center">
 		<!--Select Date-->
 		<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-usageHistorySelect">
 			<Button icon="sap-icon://nav-back" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onSelectMonthPrev" />
 			<Text text="{billTabConfigModel>/currentMonthName}, {billTabConfigModel>/currentYear}" class="ui5Mobile-usageHistorySelectLabel" />
 			<Button icon="sap-icon://navigation-right-arrow" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onSelectMonthNext" />
+		</HBox>
+		<Text text="Energy Use" class="ui5Mobile-billTab-usageText" />
+		<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-lagendSec">
+			<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-lagend">
+				<HBox width="14px" height="14px" class="ui5Mobile-billTab-lagendBullet electricity" />
+				<Text text="Electricity" class="ui5Mobile-billTab-lagendText" />
+			</HBox>
+			<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-lagend">
+				<HBox width="14px" height="14px" class="ui5Mobile-billTab-lagendBullet gas" />
+				<Text text="Nature Gas" class="ui5Mobile-billTab-lagendText" />
+			</HBox>
 		</HBox>
 		<!--Line Chart-->
 		<c:UsageHistoryChart id="ui5Mobile-usageHistoryChart" width="380" height="300" />

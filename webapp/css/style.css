@@ -220,6 +220,39 @@ body {
 	font-weight: 600;
 	color: #666666;
 	padding: 0 10px;
+	width: 200px;
+	display: flex;
+  justify-content: center;
+}
+
+.ui5Mobile-billTab-usageText {
+	color: #CCCCCC;
+	font-size: 18px;
+}
+
+.ui5Mobile-billTab-lagendSec {
+	padding: 6px 0 10px 0;
+}
+
+.ui5Mobile-billTab-lagend {
+	margin-right: 15px;
+}
+
+.ui5Mobile-billTab-lagend:last-child {
+	margin-right: 0;
+}
+
+.ui5Mobile-billTab-lagendBullet {
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.ui5Mobile-billTab-lagendBullet.electricity {
+	background: #137079;
+}
+
+.ui5Mobile-billTab-lagendBullet.gas {
+	background: #38BBCD;
 }
 
 /*------------------------------------------------------ BUTTONS -----------------------------------------------------*/
