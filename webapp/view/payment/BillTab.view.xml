@@ -13,14 +13,14 @@
 			<Button icon="sap-icon://navigation-right-arrow" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onSelectMonthNext" />
 		</HBox>
 		<Text text="Energy Use" class="ui5Mobile-billTab-usageText" />
-		<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-lagendSec">
-			<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-lagend">
-				<HBox width="14px" height="14px" class="ui5Mobile-billTab-lagendBullet electricity" />
-				<Text text="Electricity" class="ui5Mobile-billTab-lagendText" />
+		<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-legendSec">
+			<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-legend">
+				<HBox width="14px" height="14px" class="ui5Mobile-billTab-legendBullet electricity" />
+				<Text text="Electricity" class="ui5Mobile-billTab-legendText" />
 			</HBox>
-			<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-lagend">
-				<HBox width="14px" height="14px" class="ui5Mobile-billTab-lagendBullet gas" />
-				<Text text="Nature Gas" class="ui5Mobile-billTab-lagendText" />
+			<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-billTab-legend">
+				<HBox width="14px" height="14px" class="ui5Mobile-billTab-legendBullet gas" />
+				<Text text="Nature Gas" class="ui5Mobile-billTab-legendText" />
 			</HBox>
 		</HBox>
 		<!--Line Chart-->

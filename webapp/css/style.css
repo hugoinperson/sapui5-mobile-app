@@ -230,28 +230,28 @@ body {
 	font-size: 18px;
 }
 
-.ui5Mobile-billTab-lagendSec {
+.ui5Mobile-billTab-legendSec {
 	padding: 6px 0 10px 0;
 }
 
-.ui5Mobile-billTab-lagend {
+.ui5Mobile-billTab-legend {
 	margin-right: 15px;
 }
 
-.ui5Mobile-billTab-lagend:last-child {
+.ui5Mobile-billTab-legend:last-child {
 	margin-right: 0;
 }
 
-.ui5Mobile-billTab-lagendBullet {
+.ui5Mobile-billTab-legendBullet {
 	border-radius: 50%;
 	margin-right: 5px;
 }
 
-.ui5Mobile-billTab-lagendBullet.electricity {
+.ui5Mobile-billTab-legendBullet.electricity {
 	background: #137079;
 }
 
-.ui5Mobile-billTab-lagendBullet.gas {
+.ui5Mobile-billTab-legendBullet.gas {
 	background: #38BBCD;
 }
 
