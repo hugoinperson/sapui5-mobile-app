@@ -1,7 +1,18 @@
-<mvc:View 
+<mvc:View
+	controllerName="ui5.mobile.app.controller.payment.BillTab"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:c="ui5.mobile.app.control"
 	displayBlock="true">
-	<Text text="bill page" />
+	<VBox height="100%">
+		<!--Select Date-->
+		<HBox alignItems="Center" justifyContent="Center">
+			<Button icon="sap-icon://nav-back" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onPaymentPrev" />
+			<Text text="Select Payment" class="ui5Mobile-selectPaymentLabel" />
+			<Button icon="sap-icon://navigation-right-arrow" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onPaymentNext" />
+		</HBox>
+		<!--Line Chart-->
+		<c:UsageHistoryChart id="ui5Mobile-usageHistoryChart" width="380" height="300" />
+	</VBox>
 </mvc:View>

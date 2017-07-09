@@ -276,3 +276,65 @@ body {
 .sapMLabel {
 	font-family: 'Open Sans', sans-serif;
 }
+
+/*------------------------------------------------------ CHART -----------------------------------------------------*/
+
+.ui5Mobile-usageHistoryChart {
+	display: inline-block;
+}
+
+.ui5Mobile-usageHistoryChart-kwhUsageLine {
+	stroke: #38BBCD;
+	stroke-width: 2;
+	fill: none;
+}
+
+.ui5Mobile-usageHistoryChart-gasUsageLine {
+	stroke: #137079;
+	stroke-width: 2;
+	fill: none;
+}
+
+.ui5Mobile-usageHistoryChart-kwhUsageDataPoint {
+	fill: #38BBCD;
+	transition: fill 250ms, r 250ms;
+}
+
+.ui5Mobile-usageHistoryChart-gasUsageDataPoint {
+	fill: #137079;
+	transition: fill 250ms, r 250ms;
+}
+
+.ui5Mobile-usageHistoryChart-kwhUsageDataPoint:hover {
+	stroke: #38BBCD;
+	r: 6;
+	stroke-width: 4;
+	fill: #FFFFFF;
+}
+
+.ui5Mobile-usageHistoryChart-gasUsageDataPoint:hover {
+	stroke: #137079;
+	r: 6;
+	stroke-width: 4;
+	fill: #FFFFFF;
+}
+
+.ui5Mobile-usageHistoryChart-gasUsageDataPointTooltip path,
+.ui5Mobile-usageHistoryChart-kwhUsageDataPointTooltip path {
+	stroke: #ffffff;
+	stroke-width: 2;
+	fill: rgba(111,141,158, 0.5);
+}
+
+.ui5Mobile-usageHistoryChart-gasUsageDataPointTooltip text,
+.ui5Mobile-usageHistoryChart-kwhUsageDataPointTooltip text {
+	fill: #ffffff;
+	text-anchor: middle;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.shadow {
+	-webkit-filter: drop-shadow( -5px -5px 5px #000 );
+	filter: drop-shadow( -5px -5px 5px #000 );
+}
