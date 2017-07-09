@@ -27,13 +27,13 @@
 		<!--Line Chart-->
 		<c:UsageHistoryChart id="ui5Mobile-usageHistoryChart" width="380" height="240" />
 		<HBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-usageHistoryChart-xAxis">
-			<Text text="Nov" class="ui5Mobile-usageHistoryChart-xAxisLabel" />
+			<Text text="{billTabConfigModel>/beginMonthAbbrName}" class="ui5Mobile-usageHistoryChart-xAxisLabel" />
 			<core:HTML content='&lt;hr class=&quot;ui5Mobile-usageHistoryChart-xAxisLine&quot;&gt;'>
 				<core:layoutData>
 					<FlexItemData growFactor="1" />
 				</core:layoutData>
 			</core:HTML>
-			<Text text="Dev" class="ui5Mobile-usageHistoryChart-xAxisLabel" />
+			<Text text="{billTabConfigModel>/endMonthAbbrName}" class="ui5Mobile-usageHistoryChart-xAxisLabel" />
 		</HBox>
 		<!--Usage-->
 		<HBox alignItems="End" justifyContent="Center" width="100%" class="ui5Mobile-billTab-usageSec">

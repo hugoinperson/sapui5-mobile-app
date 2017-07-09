@@ -11,8 +11,9 @@ sap.ui.define(
 		
 		Controller.prototype.onInit = function () {
 			this._aMonthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			this._aMonthAbbrNames = ["Ja", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 			this._oGraphModel = new JSONModel();
-			this._oBillTabConfigModel = new JSONModel(this._initConfigData());
+			this._oBillTabConfigModel = new JSONModel(this._getConfigData(new Date()));
 			this.getView().setModel(this._oBillTabConfigModel, 'billTabConfigModel');	
 		};
 
@@ -28,12 +29,13 @@ sap.ui.define(
 			this._oGraph.refreshChart();
 		};
 
-		Controller.prototype._initConfigData = function () {
-			var currentDate = new Date();
+		Controller.prototype._getConfigData = function (currentDate) {
 			return {
 				currentMonth: currentDate.getMonth(),
 				currentYear: currentDate.getFullYear(),
-				currentMonthName: this._aMonthNames[currentDate.getMonth()]
+				currentMonthName: this._aMonthNames[currentDate.getMonth()],
+				beginMonthAbbrName: this._aMonthAbbrNames[currentDate.getMonth()],
+				endMonthAbbrName: this._aMonthAbbrNames[(currentDate.getMonth() + 1) % 12]
 			};
 		};
 
@@ -58,11 +60,7 @@ sap.ui.define(
 			var config = this._oBillTabConfigModel.getData();
 			var currentDate = new Date((config.currentMonth + 1) + '/01/' + config.currentYear);
 			var newDate = new Date(currentDate.setMonth(bNextMonth ? config.currentMonth + 1 : config.currentMonth - 1));
-			this._oBillTabConfigModel.setData({
-				currentMonth: newDate.getMonth(),
-				currentYear: newDate.getFullYear(),
-				currentMonthName: this._aMonthNames[newDate.getMonth()]
-			});
+			this._oBillTabConfigModel.setData(this._getConfigData(newDate));
 		};
 
 		Controller.prototype.onSelectMonthPrev = function () {
