@@ -25,7 +25,7 @@
 			</HBox>
 		</HBox>
 		<!--Line Chart-->
-		<c:UsageHistoryChart id="ui5Mobile-usageHistoryChart" width="380" height="240" />
+		<c:UsageHistoryChart id="ui5Mobile-usageHistoryChart" width="380" height="220" />
 		<HBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-usageHistoryChart-xAxis">
 			<Text text="{billTabConfigModel>/beginMonthAbbrName}" class="ui5Mobile-usageHistoryChart-xAxisLabel" />
 			<core:HTML content='&lt;hr class=&quot;ui5Mobile-usageHistoryChart-xAxisLine&quot;&gt;'>
