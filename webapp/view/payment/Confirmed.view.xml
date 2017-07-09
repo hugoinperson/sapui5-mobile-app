@@ -1,0 +1,20 @@
+<mvc:View
+	class="ui5Mobile-paymentConfirmedPage"
+	controllerName="ui5.mobile.app.controller.payment.Confirmed"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+  displayBlock="true">
+	<VBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-paymentConfirmedPage-container">
+		<Text text="Thank you, Ajay!" class="ui5Mobile-paymentConfirmedPage-msg" />
+		<Text text="Payment received: $132.36" class="ui5Mobile-paymentConfirmedPage-msgDetail" />
+		<Image src="images/check.svg" width="260px" class="ui5Mobile-paymentConfirmedPage-checkIcon"/>
+		<VBox alignItems="Center" justifyContent="Center" width="100%" class="ui5Mobile-paymentConfirmedPage-dueSec">
+			<Text text="Due: $0.00" class="ui5Mobile-paymentConfirmedPage-due" />
+			<Text text="Confirmation: #23064" class="ui5Mobile-paymentConfirmedPage-serialNumber" />
+			<Text text="Don't forget payment made by credit card may take 2-3 business days to process" class="ui5Mobile-paymentConfirmedPage-reminder" />
+		</VBox>
+	</VBox>
+</mvc:View>

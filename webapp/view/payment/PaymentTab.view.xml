@@ -43,6 +43,6 @@
 			<Label class="ui5Mobile-paymentTab-payInfoLabel" text="Pay Amount:"/>
 			<Label class="ui5Mobile-paymentTab-payInfoVal" text="$132.36"/>
 		</HBox>
-		<Button type="Default" text="Confirm Payment" press="onLogin" class="ui5Mobile-primaryBtn" />
+		<Button type="Default" text="Confirm Payment" press="onPayment" class="ui5Mobile-primaryBtn" />
 	</VBox>
 </mvc:View>

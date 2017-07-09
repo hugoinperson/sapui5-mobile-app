@@ -24,6 +24,10 @@ sap.ui.define(
 			this._oPaymentCarousel.next();
 		};
 
+		Controller.prototype.onPayment = function () {
+			this.navTo('paymentConfirmed');
+		};
+
 		return Controller;
 	}
 );

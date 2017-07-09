@@ -27,13 +27,19 @@ sap.ui.define(
 
 		Controller.prototype._getTitleByRoute = function (sRouteName) {
 			var titleRouteMap = {
-				payment: 'Pay My Bill'
+				payment: 'Pay My Bill',
+				paymentConfirmed: 'Confirmation'
 			};
 			return titleRouteMap[sRouteName];
 		};
 
 		Controller.prototype.onNavBack = function () {
-			this.navTo('login');
+			var sRouteName = this.getOwnerComponent().getCurrentRoute();
+			var backRouteMap = {
+				payment: 'login',
+				paymentConfirmed: 'payment'
+			};
+			this.navTo(backRouteMap[sRouteName]);
 		};
 
 		return Controller;

@@ -88,6 +88,10 @@
 					"pattern": "payment",
 					"target": ["mainNav", "payment"]
 				},
+				"paymentConfirmed": {
+					"pattern": "paymentConfirmed",
+					"target": ["mainNav", "paymentConfirmed"]
+				},
 				"notPhone": {
 					"pattern": "notPhone",
 					"target": "notPhone"
@@ -110,6 +114,11 @@
 				},
 				"payment": {
 					"viewName": "payment.Main",
+					"controlAggregation": "content",
+					"controlId": "mainPage"
+				},
+				"paymentConfirmed": {
+					"viewName": "payment.Confirmed",
 					"controlAggregation": "content",
 					"controlId": "mainPage"
 				},

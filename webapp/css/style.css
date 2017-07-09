@@ -97,7 +97,8 @@ body {
 	color: #137079;
 	font-size: 1rem;
 }
-/*------------------------------------------------------ PAYMENTS -----------------------------------------------------*/
+
+/*------------------------------------------------------ PAYMENT -----------------------------------------------------*/
 
 .ui5Mobile-paymentPage {
 	display: flex;
@@ -316,6 +317,52 @@ body {
 
 .ui5Mobile-billTab-lastMonthText {
 	color: #CCCCCC;
+}
+
+/* Confirmed Page */
+
+.ui5Mobile-paymentConfirmedPage {
+	background: linear-gradient(#02A8D0, #0B5E79);
+}
+
+.ui5Mobile-paymentConfirmedPage-container {
+	padding: 20px 20px;
+}
+
+.ui5Mobile-paymentConfirmedPage-msg {
+	padding: 10px 0;
+	color: white;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.ui5Mobile-paymentConfirmedPage-msgDetail {
+	color: white;
+	font-size: 14px;
+}
+
+.ui5Mobile-paymentConfirmedPage-checkIcon {
+	margin: 30px 0;
+}
+
+.ui5Mobile-paymentConfirmedPage-due {
+	font-size: 26px;
+	color: white;
+	font-weight: 300;
+}
+
+.ui5Mobile-paymentConfirmedPage-serialNumber {
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+}
+
+.ui5Mobile-paymentConfirmedPage-reminder {
+	font-size: 14px;
+	color: white;
+	padding: 0 20px;
+	font-weight: 300;
+	text-align: center !important;
 }
 
 /*------------------------------------------------------ BUTTONS -----------------------------------------------------*/
