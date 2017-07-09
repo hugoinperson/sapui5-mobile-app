@@ -134,9 +134,12 @@ body {
 /* Payment Tab */
 
 .ui5Mobile-paymentTab-amountDueLabel {
-	font-size: 1.2rem;
+	font-size: 20px;
 	font-weight: 600;
 	padding: 20px 10px 10px 10px;
+	height: 40px;
+	display: flex;
+  align-items: center;
 }
 
 .ui5Mobile-paymentTab-amountDueAmount {
@@ -204,6 +207,19 @@ body {
 .ui5Mobile-addPaymentMethodBtn .sapMBtnIcon {
 	color: #666666;
 	font-size: 3em;
+}
+
+/* Bill Tab */
+
+.ui5Mobile-usageHistorySelect {
+	padding: 20px 10px 10px 10px;
+}
+
+.ui5Mobile-usageHistorySelectLabel {
+	font-size: 20px;
+	font-weight: 600;
+	color: #666666;
+	padding: 0 10px;
 }
 
 /*------------------------------------------------------ BUTTONS -----------------------------------------------------*/
@@ -287,12 +303,14 @@ body {
 	stroke: #38BBCD;
 	stroke-width: 2;
 	fill: none;
+	transition: path 250ms;
 }
 
 .ui5Mobile-usageHistoryChart-gasUsageLine {
 	stroke: #137079;
 	stroke-width: 2;
 	fill: none;
+	transition: path 250ms;
 }
 
 .ui5Mobile-usageHistoryChart-kwhUsageDataPoint {

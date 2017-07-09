@@ -7,10 +7,10 @@
 	displayBlock="true">
 	<VBox height="100%">
 		<!--Select Date-->
-		<HBox alignItems="Center" justifyContent="Center">
-			<Button icon="sap-icon://nav-back" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onPaymentPrev" />
-			<Text text="Select Payment" class="ui5Mobile-selectPaymentLabel" />
-			<Button icon="sap-icon://navigation-right-arrow" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onPaymentNext" />
+		<HBox alignItems="Center" justifyContent="Center" class="ui5Mobile-usageHistorySelect">
+			<Button icon="sap-icon://nav-back" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onSelectMonthPrev" />
+			<Text text="{billTabConfigModel>/currentMonthName}, {billTabConfigModel>/currentYear}" class="ui5Mobile-usageHistorySelectLabel" />
+			<Button icon="sap-icon://navigation-right-arrow" class="ui5Mobile-iconBtn ui5Mobile-selectPaymentBtn" press="onSelectMonthNext" />
 		</HBox>
 		<!--Line Chart-->
 		<c:UsageHistoryChart id="ui5Mobile-usageHistoryChart" width="380" height="300" />
